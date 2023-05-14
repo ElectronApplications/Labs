@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 namespace Task411 {
 
@@ -10,7 +10,7 @@ namespace Task411 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -19,13 +19,13 @@ namespace Task411 {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm()
 		{
@@ -68,14 +68,14 @@ namespace Task411 {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -122,7 +122,7 @@ namespace Task411 {
 				this->Graph1Item, this->Graph2Item,
 					this->Graph3Item, this->Graph4Item
 			});
-			this->GraphsMenu->Text = L"графики";
+			this->GraphsMenu->Text = L"РіСЂР°С„РёРєРё";
 			// 
 			// Graph1Item
 			// 
@@ -157,7 +157,7 @@ namespace Task411 {
 				this->Graph1ColorItem, this->Graph2ColorItem,
 					this->Graph3ColorItem, this->Graph4ColorItem
 			});
-			this->ColorsMenu->Text = L"цвета графиков";
+			this->ColorsMenu->Text = L"С†РІРµС‚Р° РіСЂР°С„РёРєРѕРІ";
 			// 
 			// Graph1ColorItem
 			// 
@@ -245,63 +245,63 @@ namespace Task411 {
 
 		}
 #pragma endregion
-	// Функция 1 графика
+	// Р¤СѓРЅРєС†РёСЏ 1 РіСЂР°С„РёРєР°
 	private: float f1(float x) {
 		return x - Math::Sin(x / 2);
 	}
 	
-	// Функция 2 графика
+	// Р¤СѓРЅРєС†РёСЏ 2 РіСЂР°С„РёРєР°
 	private: float f2(float x) {
 		return x - 2 * Math::Sin(x);
 	}
 
-	// Функция 3 графика
+	// Р¤СѓРЅРєС†РёСЏ 3 РіСЂР°С„РёРєР°
 	private: float f3(float x) {
 		return x - Math::Sin(2 * x);
 	}
 	
-	// Функция 4 графика
+	// Р¤СѓРЅРєС†РёСЏ 4 РіСЂР°С„РёРєР°
 	private: float f4(float x) {
 		return x - Math::Sin(x);
 	}
 
-	private: Drawing::Color Graph1Color = Drawing::Color::Red; // Цвет 1 графика
-	private: Drawing::Color Graph2Color = Drawing::Color::Green; // Цвет 2 графика
-	private: Drawing::Color Graph3Color = Drawing::Color::Blue; // Цвет 3 графика
-	private: Drawing::Color Graph4Color = Drawing::Color::Yellow; // Цвет 4 графика
+	private: Drawing::Color Graph1Color = Drawing::Color::Red; // Р¦РІРµС‚ 1 РіСЂР°С„РёРєР°
+	private: Drawing::Color Graph2Color = Drawing::Color::Green; // Р¦РІРµС‚ 2 РіСЂР°С„РёРєР°
+	private: Drawing::Color Graph3Color = Drawing::Color::Blue; // Р¦РІРµС‚ 3 РіСЂР°С„РёРєР°
+	private: Drawing::Color Graph4Color = Drawing::Color::Yellow; // Р¦РІРµС‚ 4 РіСЂР°С„РёРєР°
 
 	private: System::Void GraphBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		int x_min = Decimal::ToInt32(XminNumeric->Value);
 		int x_max = Decimal::ToInt32(XmaxNumeric->Value);
-		int total = x_max - x_min; // Всего клеточек
-		float cell_size = 500.0f / total; // Размер клеточки
+		int total = x_max - x_min; // Р’СЃРµРіРѕ РєР»РµС‚РѕС‡РµРє
+		float cell_size = 500.0f / total; // Р Р°Р·РјРµСЂ РєР»РµС‚РѕС‡РєРё
 
-		// Рисуем оси
+		// Р РёСЃСѓРµРј РѕСЃРё
 		Pen^ axes_pen = gcnew Pen(Brushes::Black);
 		axes_pen->Width = 3;
-		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size, 500.0f); // Ось Y
-		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size - 100.0f / total, 200.0f / total); // Стрелочка на оси Y
-		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size + 100.0f / total, 200.0f / total); // Стрелочка на оси Y
-		e->Graphics->DrawLine(axes_pen, 0, 250, 500, 250); // Ось X
-		e->Graphics->DrawLine(axes_pen, 500.0f, 250.0f, 500.0f - 200.0f / total, 250.0f - 100.0f / total); // Стрелочка на оси X
-		e->Graphics->DrawLine(axes_pen, 500.0f, 250.0f, 500.0f - 200.0f / total, 250.0f + 100.0f / total); // Стрелочка на оси X
+		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size, 500.0f); // РћСЃСЊ Y
+		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size - 100.0f / total, 200.0f / total); // РЎС‚СЂРµР»РѕС‡РєР° РЅР° РѕСЃРё Y
+		e->Graphics->DrawLine(axes_pen, -x_min * cell_size, 0.0f, -x_min * cell_size + 100.0f / total, 200.0f / total); // РЎС‚СЂРµР»РѕС‡РєР° РЅР° РѕСЃРё Y
+		e->Graphics->DrawLine(axes_pen, 0, 250, 500, 250); // РћСЃСЊ X
+		e->Graphics->DrawLine(axes_pen, 500.0f, 250.0f, 500.0f - 200.0f / total, 250.0f - 100.0f / total); // РЎС‚СЂРµР»РѕС‡РєР° РЅР° РѕСЃРё X
+		e->Graphics->DrawLine(axes_pen, 500.0f, 250.0f, 500.0f - 200.0f / total, 250.0f + 100.0f / total); // РЎС‚СЂРµР»РѕС‡РєР° РЅР° РѕСЃРё X
 
-		// Рисуем сетку
+		// Р РёСЃСѓРµРј СЃРµС‚РєСѓ
 		Pen^ grid_pen = gcnew Pen(Brushes::Black);
 		grid_pen->DashStyle = Drawing2D::DashStyle::DashDot;
-		for (int i = x_min; i <= x_max; i++) { // Вертикальные линии
+		for (int i = x_min; i <= x_max; i++) { // Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Рµ Р»РёРЅРёРё
 			e->Graphics->DrawLine(grid_pen, (i - x_min) * cell_size, 0.0f, (i - x_min) * cell_size, 500.0f);
 		}
-		for (int i = 0; i <= total / 2; i++) { // Горизонтальные линии
+		for (int i = 0; i <= total / 2; i++) { // Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Рµ Р»РёРЅРёРё
 			e->Graphics->DrawLine(grid_pen, 0.0f, 250.0f - (total / 2 - i) * cell_size, 500.0f, 250.0f - (total / 2 - i) * cell_size);
 			e->Graphics->DrawLine(grid_pen, 0.0f, 250.0f + (total / 2 - i) * cell_size, 500.0f, 250.0f + (total / 2 - i) * cell_size);
 		}
 
-		// Отмечаем начало координат
+		// РћС‚РјРµС‡Р°РµРј РЅР°С‡Р°Р»Рѕ РєРѕРѕСЂРґРёРЅР°С‚
 		if(total < 40)
 			e->Graphics->DrawString("0", gcnew Drawing::Font("sans-serif", 14 * 20 / total), Brushes::Black, 250.0f - cell_size * (x_max + x_min + 1.5f) / 2, 250.0f);
 
-		// Рисуем 1 график
+		// Р РёСЃСѓРµРј 1 РіСЂР°С„РёРє
 		if (Graph1Item->Checked) {
 			Pen^ graph_pen = gcnew Pen(gcnew SolidBrush(Graph1Color));
 			graph_pen->Width = 2;
@@ -312,7 +312,7 @@ namespace Task411 {
 			}
 		}
 
-		// Рисуем 2 график
+		// Р РёСЃСѓРµРј 2 РіСЂР°С„РёРє
 		if (Graph2Item->Checked) {
 			Pen^ graph_pen = gcnew Pen(gcnew SolidBrush(Graph2Color));
 			graph_pen->Width = 2;
@@ -323,7 +323,7 @@ namespace Task411 {
 			}
 		}
 
-		// Рисуем 3 график
+		// Р РёСЃСѓРµРј 3 РіСЂР°С„РёРє
 		if (Graph3Item->Checked) {
 			Pen^ graph_pen = gcnew Pen(gcnew SolidBrush(Graph3Color));
 			graph_pen->Width = 2;
@@ -334,7 +334,7 @@ namespace Task411 {
 			}
 		}
 
-		// Рисуем 4 график
+		// Р РёСЃСѓРµРј 4 РіСЂР°С„РёРє
 		if (Graph4Item->Checked) {
 			Pen^ graph_pen = gcnew Pen(gcnew SolidBrush(Graph4Color));
 			graph_pen->Width = 2;
@@ -347,59 +347,59 @@ namespace Task411 {
 	}
 
 	private: System::Void XminNumeric_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-		GraphBox->Invalidate(); // Перерисовываем графики при изменении x_min
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё РїСЂРё РёР·РјРµРЅРµРЅРёРё x_min
 	}
 
 	private: System::Void XmaxNumeric_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-		GraphBox->Invalidate(); // Перерисовываем графики при изменении x_max
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё РїСЂРё РёР·РјРµРЅРµРЅРёРё x_max
 	}
 
 	private: System::Void Graph1Item_Click(System::Object^ sender, System::EventArgs^ e) {
-		Graph1Item->Checked = !Graph1Item->Checked; // Вкл/выкл 1 график
-		GraphBox->Invalidate(); // Перерисовываем графики
+		Graph1Item->Checked = !Graph1Item->Checked; // Р’РєР»/РІС‹РєР» 1 РіСЂР°С„РёРє
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph2Item_Click(System::Object^ sender, System::EventArgs^ e) {
-		Graph2Item->Checked = !Graph2Item->Checked; // Вкл/выкл 2 график
-		GraphBox->Invalidate(); // Перерисовываем графики
+		Graph2Item->Checked = !Graph2Item->Checked; // Р’РєР»/РІС‹РєР» 2 РіСЂР°С„РёРє
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph3Item_Click(System::Object^ sender, System::EventArgs^ e) {
-		Graph3Item->Checked = !Graph3Item->Checked; // Вкл/выкл 3 график
-		GraphBox->Invalidate(); // Перерисовываем графики
+		Graph3Item->Checked = !Graph3Item->Checked; // Р’РєР»/РІС‹РєР» 3 РіСЂР°С„РёРє
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph4Item_Click(System::Object^ sender, System::EventArgs^ e) {
-		Graph4Item->Checked = !Graph4Item->Checked; // Вкл/выкл 4 график
-		GraphBox->Invalidate(); // Перерисовываем графики
+		Graph4Item->Checked = !Graph4Item->Checked; // Р’РєР»/РІС‹РєР» 4 РіСЂР°С„РёРє
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph1ColorItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		GraphColorDialog->Color = Graph1Color;
 		if (GraphColorDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-			Graph1Color = GraphColorDialog->Color; // Меняем цвет 1 графика
-		GraphBox->Invalidate(); // Перерисовываем графики
+			Graph1Color = GraphColorDialog->Color; // РњРµРЅСЏРµРј С†РІРµС‚ 1 РіСЂР°С„РёРєР°
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph2ColorItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		GraphColorDialog->Color = Graph2Color;
 		if (GraphColorDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-			Graph2Color = GraphColorDialog->Color; // Меняем цвет 2 графика
-		GraphBox->Invalidate(); // Перерисовываем графики
+			Graph2Color = GraphColorDialog->Color; // РњРµРЅСЏРµРј С†РІРµС‚ 2 РіСЂР°С„РёРєР°
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph3ColorItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		GraphColorDialog->Color = Graph3Color;
 		if (GraphColorDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-			Graph3Color = GraphColorDialog->Color; // Меняем цвет 3 графика
-		GraphBox->Invalidate(); // Перерисовываем графики
+			Graph3Color = GraphColorDialog->Color; // РњРµРЅСЏРµРј С†РІРµС‚ 3 РіСЂР°С„РёРєР°
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 
 	private: System::Void Graph4ColorItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		GraphColorDialog->Color = Graph4Color;
 		if (GraphColorDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-			Graph4Color = GraphColorDialog->Color; // Меняем цвет 4 графика
-		GraphBox->Invalidate(); // Перерисовываем графики
+			Graph4Color = GraphColorDialog->Color; // РњРµРЅСЏРµРј С†РІРµС‚ 4 РіСЂР°С„РёРєР°
+		GraphBox->Invalidate(); // РџРµСЂРµСЂРёСЃРѕРІС‹РІР°РµРј РіСЂР°С„РёРєРё
 	}
 };
 }
