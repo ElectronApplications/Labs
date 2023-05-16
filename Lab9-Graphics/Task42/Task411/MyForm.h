@@ -171,6 +171,16 @@ namespace Task42 {
 			// 
 			// GraphChart
 			// 
+			chartArea1->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Triangle;
+			chartArea1->AxisX->Crossing = 0;
+			chartArea1->AxisX->Enabled = System::Windows::Forms::DataVisualization::Charting::AxisEnabled::True;
+			chartArea1->AxisX->LabelStyle->Format = L"0";
+			chartArea1->AxisX->LineWidth = 2;
+			chartArea1->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Triangle;
+			chartArea1->AxisY->Crossing = 0;
+			chartArea1->AxisY->Enabled = System::Windows::Forms::DataVisualization::Charting::AxisEnabled::True;
+			chartArea1->AxisY->LabelStyle->Format = L"0";
+			chartArea1->AxisY->LineWidth = 2;
 			chartArea1->Name = L"ChartArea1";
 			this->GraphChart->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
