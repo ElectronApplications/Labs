@@ -176,6 +176,16 @@ namespace Task412 {
 			// 
 			// GraphChart
 			// 
+			chartArea1->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Triangle;
+			chartArea1->AxisX->Crossing = 0;
+			chartArea1->AxisX->Enabled = System::Windows::Forms::DataVisualization::Charting::AxisEnabled::True;
+			chartArea1->AxisX->IsMarksNextToAxis = false;
+			chartArea1->AxisX->LabelStyle->Format = L"0";
+			chartArea1->AxisX->LineWidth = 2;
+			chartArea1->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::Triangle;
+			chartArea1->AxisY->Crossing = 0;
+			chartArea1->AxisY->Enabled = System::Windows::Forms::DataVisualization::Charting::AxisEnabled::True;
+			chartArea1->AxisY->LineWidth = 2;
 			chartArea1->Name = L"ChartArea1";
 			this->GraphChart->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
@@ -533,22 +543,22 @@ namespace Task412 {
 		GraphChart->Series[3]->Points->Clear();
 
 		if (ShowGraph1->Checked) {
-			for (float x = x_min1; x <= x_max1; x += dx)
+			for (float x = x_min1 + dx; x < x_max1; x += dx)
 				GraphChart->Series[0]->Points->AddXY(x, f1(x));
 		}
 		
 		if (ShowGraph2->Checked) {
-			for (float x = x_min2; x <= x_max2; x += dx)
+			for (float x = x_min2 + dx; x < x_max2; x += dx)
 				GraphChart->Series[1]->Points->AddXY(x, f2(x));
 		}
 		
 		if (ShowGraph3->Checked) {
-			for (float x = x_min3; x <= x_max3; x += dx)
+			for (float x = x_min3 + dx; x < x_max3; x += dx)
 				GraphChart->Series[2]->Points->AddXY(x, f3(x));
 		}
 		
 		if (ShowGraph4->Checked) {
-			for (float x = x_min4; x <= x_max4; x += dx)
+			for (float x = x_min4 + dx; x < x_max4; x += dx)
 				GraphChart->Series[3]->Points->AddXY(x, f4(x));
 		}
 	}
